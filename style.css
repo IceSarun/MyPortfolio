@@ -12,7 +12,7 @@ html{
 
 body{
 
-    font-family:'Inter', sans-serif;
+    font-family: "Inter", sans-serif !important;
     color:white;
     padding-top:78px;
     background:#000;
@@ -358,8 +358,7 @@ section h2::before{
 .card:hover{
 
     transform:
-        translateY(-10px)
-        scale(1.02);
+        translateY(-10px) scale(1.02);
 
     border:
         1px solid rgba(255,32,78,0.4);
