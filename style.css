@@ -41,8 +41,6 @@ body::before{
     );
 
     opacity:0.15;
-
-    z-index:1;
 }
 /* ===== HEADER ===== */
 header{
@@ -360,7 +358,7 @@ section h2::before{
 .card:hover{
 
     transform:
-        translateY(-10px);
+        translateY(-10px)
         scale(1.02);
 
     border:
