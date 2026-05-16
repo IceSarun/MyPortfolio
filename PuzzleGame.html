@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Matching Puzzle Game</title>
+
+    <link rel="stylesheet" href="project.css">
+
+</head>
+
+<body>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>Matching Puzzle Game</h1>
+
+            <p>
+                A matching educational game that teaches how to respond to real-world disasters using various applications.
+            </p>
+
+            <a href="#trailer" class="hero-btn">
+                WATCH TRAILER
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about">
+
+        <h2>ABOUT THE GAME</h2>
+
+        <p>
+            A straightforward educational matching game designed to teach players how satellite-based applications can effectively address real-world disasters.
+        </p>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+        <h2>FEATURES</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                Multiple correct matches
+                
+            </div>
+
+            <div class="feature-card">
+                View option details
+            </div>
+
+            <div class="feature-card">
+                Timed hint system
+            </div>
+
+            <div class="feature-card">
+                Satellite-style live video on external device
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCREENSHOTS -->
+
+    <section class="gallery">
+
+        <h2>SCREENSHOTS</h2>
+
+        <div class="gallery-grid">
+
+            <img src="images/Puzzle-SH/Gameplay0.png" class="gallery-img">
+            <img src="images/Puzzle-SH/Gameplay1.png" class="gallery-img">
+            <img src="images/Puzzle-SH/Gameplay2.png" class="gallery-img">
+            <img src="images/Puzzle-SH/Gameplay3.png" class="gallery-img">
+            <img src="images/Puzzle-SH/Gameplay4.png" class="gallery-img">
+            <img src="images/Puzzle-SH/Gameplay5.png" class="gallery-img">
+            <img src="images/Puzzle-SH/Gameplay6.png" class="gallery-img">
+            <img src="images/Puzzle-SH/Gameplay7.png" class="gallery-img">
+            <img src="images/Puzzle-SH/Gameplay8.png" class="gallery-img">
+
+        </div>
+
+    </section>
+    
+    <div class="image-viewer" id="imageViewer">
+
+    <span class="close-btn" id="closeViewer">&times;</span>
+    
+    <button class="nav-btn prev-btn">&#10094;</button>
+
+    <img id="viewerImage">
+
+    <button class="nav-btn next-btn">&#10095;</button>
+
+    </div>
+
+    <!-- TRAILER -->
+
+    <section class="trailer"
+             id="trailer">
+
+        <h2>TRAILER</h2>
+
+        <div class="video-container">
+
+            <iframe
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+
+                title="Trailer"
+
+                frameborder="0"
+
+                allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+    <!-- TECH STACK -->
+
+    <section class="tech">
+
+        <h2>TECH STACK</h2>
+
+        <div class="tech-grid">
+
+            <div class="tech-card">
+
+                <h3>Engine</h3>
+
+                <p>Unity</p>
+
+            </div>
+
+            <div class="tech-card">
+
+                <h3>Language</h3>
+
+                <p>C#</p>
+
+            </div>
+
+            <div class="tech-card">
+
+                <h3>Tools</h3>
+
+                <p>DOTween / TextMeshPro / ThaiTextCare-for-Unity</p>
+
+            </div>
+
+            <div class="tech-card">
+
+                <h3>Role</h3>
+
+                <p>Programmer</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+
+const images = document.querySelectorAll(".gallery-img");
+
+const viewer = document.getElementById("imageViewer");
+
+const viewerImage = document.getElementById("viewerImage");
+
+const closeViewer = document.getElementById("closeViewer");
+
+const prevBtn = document.querySelector(".prev-btn");
+
+const nextBtn = document.querySelector(".next-btn");
+
+let currentIndex = 0;
+
+
+// OPEN IMAGE
+
+images.forEach((img,index) => {
+
+    img.addEventListener("click", () => {
+
+        currentIndex = index;
+
+        showImage();
+
+        viewer.classList.add("active");
+    });
+});
+
+
+// SHOW IMAGE
+
+function showImage(){
+
+    viewerImage.src = images[currentIndex].src;
+}
+
+
+// CLOSE
+
+closeViewer.addEventListener("click", () => {
+
+    viewer.classList.remove("active");
+});
+
+
+// CLICK OUTSIDE
+
+viewer.addEventListener("click", (e) => {
+
+    if(e.target === viewer){
+
+        viewer.classList.remove("active");
+    }
+});
+
+
+// NEXT
+
+nextBtn.addEventListener("click", () => {
+
+    currentIndex++;
+
+    if(currentIndex >= images.length){
+
+        currentIndex = 0;
+    }
+
+    showImage();
+});
+
+
+// PREVIOUS
+
+prevBtn.addEventListener("click", () => {
+
+    currentIndex--;
+
+    if(currentIndex < 0){
+
+        currentIndex = images.length - 1;
+    }
+
+    showImage();
+});
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Developer Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>Sarunpawat Portfolio</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            Game Developer
+        </span>
+
+        <h2>
+            Story-Driven <span>Game</span><br>
+            Experiences
+        </h2>
+
+        <p>
+            Hi, I'm Sarunpawat Phosoi — Unity game developer focused on
+            narrative experiences, gameplay systems, psychological horror,
+            2D art, visual storytelling, and creative writing.
+        </p>
+
+        <div class="hero-skills">
+            <span>Game Developer</span>
+            <span>•</span>
+            <span>2D Artist</span>
+            <span>•</span>
+            <span>Narrative Writing</span>
+            <span>•</span>
+            <span>Creative Design</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+
+        <div class="skill-grid">
+            <div class="card"> <img src="icons/unity.png">
+                <h3>Unity</h3>
+                <p>Game Engine Development</p>
+            </div>
+            <div class="card"> <img src="icons/canva.png">
+                <h3>Canva</h3>
+                <p>Graphic Design Platform</p>
+            </div>
+            <div class="card"> <img src="icons/figma.png">
+                <h3>Figma</h3>
+                <p>Interface Design Tool</p>
+            </div>
+            <div class="card"> <img src="icons/art.png">
+                <h3>2D Artist</h3>
+                <p>Digital Drawing</p>
+            </div>
+            <div class="card"> <img src="icons/blender.png">
+                <h3>Blender</h3>
+                <p>3D Creation Engine</p>
+            </div>
+            <div class="card"> <img src="icons/unreal.png">
+                <h3>Unreal 5</h3>
+                <p>Game Engine Development</p>
+            </div>
+
+        </div>
+    </section>
+
+<section class="projects" id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+
+        <div class="project-card horror-card">
+            <div class="project-image">
+                <img src="images/TheNextTask-Ajintika.png" alt="">
+            </div>
+
+            <div class="project-info">
+                <h3>Ajintika: The Next Task [Demo]</h3>
+
+                <p>
+                    An indie horror visual novel focused on typing mechanics
+                    and psychological storytelling.
+                </p>
+
+                <a href="TheNextTask-Ajintika.html" 
+                >
+                    View Project
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card puzzle-card">
+            <div class="project-image">
+                <img src="images/GisdaProject.png" alt="">
+            </div>
+
+            <div class="project-info">
+                <h3>Matching Puzzle Game</h3>
+
+                <p>
+                    Quiz-based educational puzzle game using application matching.
+                </p>
+
+                <a href="PuzzleGame.html">
+                    View Project
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card racing-card">
+            <div class="project-image">
+                <img src="images/WheelOfFortune.png" alt="">
+            </div>
+
+            <div class="project-info">
+                <h3>Wheel of Fortune</h3>
+
+                <p>
+                    A racing game featuring AI bots set in a haunted environment inspired by Thai cultural beliefs.
+                </p>
+
+                <a href="WheelOfFortune.html"
+                >
+                    View Project
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card anime-card">
+            <div class="project-image">
+                <img src="images/HungryGame.jpg" alt="">
+            </div>
+
+            <div class="project-info">
+                <h3>The Hungry Game</h3>
+
+                <p>
+                    A 3D walking animation for a fruit character, divided into three shots to emphasize motion flow and character expression.
+                </p>
+
+                <a href="TheHungryGame.html"
+               >
+                    View Project
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<script>
+window.addEventListener("scroll", function(){
+
+    const header = document.querySelector("header");
+
+    header.classList.toggle(
+        "scrolled",
+        window.scrollY > 50
+    );
+
+});
+</script>
+
+</body>
+</html>
+
