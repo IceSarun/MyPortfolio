@@ -17,16 +17,38 @@
 </head>
 
 <body>
+    <header>
+    <div class="header-left">
 
+        <a href="index.html" class="back-btn">
+            ↩
+        </a>
+
+        <h1>PROJECT DETAIL</h1>
+
+    </div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#trailer">Trailer</a>
+        <a href="#tech">Tech</a>
+    </nav>
+    </header>
     <!-- HERO -->
 
-    <section class="hero">
+    <section class="hero" >
+
+        <div class="hero-bg">
+            <img src="images/GisdaProject.png" alt="">
+        </div>
 
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
 
-            <h1>Matching Puzzle Game</h1>
+            <h1>Matching Puzzle Game <span>[FREELANCE]</span></h1>
 
             <p>
                 A matching educational game that teaches how to respond to real-world disasters using various applications.
@@ -43,12 +65,12 @@
 
     <!-- ABOUT -->
 
-    <section class="about">
+    <section class="about" id="about">
 
         <h2>ABOUT THE GAME</h2>
 
         <p>
-            A straightforward educational matching game designed to teach players how satellite-based applications can effectively address real-world disasters.
+            Freelance project at MotionSix Studio: A straightforward educational matching game designed to teach players how satellite-based applications can effectively address real-world disasters.
         </p>
 
     </section>
@@ -56,27 +78,27 @@
 
     <!-- FEATURES -->
 
-    <section class="features">
+    <section class="features" id="features">
 
         <h2>FEATURES</h2>
 
         <div class="feature-grid">
 
             <div class="feature-card">
-                Multiple correct matches
+                <p>Freelance project</p>
                 
             </div>
 
             <div class="feature-card">
-                View option details
+                <p>View option details</p>
             </div>
 
             <div class="feature-card">
-                Timed hint system
+                <p>Timed hint system</p>
             </div>
 
             <div class="feature-card">
-                Satellite-style live video on external device
+                <p>Satellite-style live video on external device</p>
             </div>
 
         </div>
@@ -86,7 +108,7 @@
 
     <!-- SCREENSHOTS -->
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
 
         <h2>SCREENSHOTS</h2>
 
@@ -145,7 +167,7 @@
 
     <!-- TECH STACK -->
 
-    <section class="tech">
+    <section class="tech" id="tech">
 
         <h2>TECH STACK</h2>
 
@@ -273,6 +295,17 @@ prevBtn.addEventListener("click", () => {
     }
 
     showImage();
+});
+
+window.addEventListener("scroll", function(){
+
+    const header = document.querySelector("header");
+
+    header.classList.toggle(
+        "scrolled",
+        window.scrollY > 50
+    );
+
 });
 
 </script>

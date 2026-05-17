@@ -19,10 +19,32 @@
 </head>
 
 <body>
+    <header>
+    <div class="header-left">
 
+        <a href="index.html" class="back-btn">
+            ↩
+        </a>
+
+        <h1>PROJECT DETAIL</h1>
+
+    </div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#trailer">Trailer</a>
+        <a href="#tech">Tech</a>
+    </nav>
+    </header>
     <!-- HERO -->
 
     <section class="hero">
+
+        <div class="hero-bg">
+            <img src="images/HungryGame.jpg" alt="">
+        </div>
 
         <div class="hero-overlay"></div>
 
@@ -45,7 +67,7 @@
 
     <!-- ABOUT -->
 
-    <section class="about">
+    <section class="about" id="about">
 
         <h2>ABOUT THE GAME</h2>
 
@@ -58,26 +80,26 @@
 
     <!-- FEATURES -->
 
-    <section class="features">
+    <section class="features" id="features">
 
         <h2>FEATURES</h2>
 
         <div class="feature-grid">
 
             <div class="feature-card">
-                Short Animation
+                <p>Short animation</p>
             </div>
 
             <div class="feature-card">
-                2D/3D hybrid shader
+                <p>2D/3D hybrid shader</p>
             </div>
 
             <div class="feature-card">
-                Disoriented & Paranoid 
+                <p>Disoriented & Paranoid </p>
             </div>
 
             <div class="feature-card">
-                A fully self-modeled 3D scene.
+                <p>A fully self-modeled 3D scene.</p>
             </div>
 
         </div>
@@ -87,7 +109,7 @@
 
     <!-- SCREENSHOTS -->
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
 
         <h2>SCREENSHOTS</h2>
 
@@ -145,7 +167,7 @@
 
     <!-- TECH STACK -->
 
-    <section class="tech">
+    <section class="tech" id="tech">
 
         <h2>TECH STACK</h2>
 
@@ -273,6 +295,17 @@ prevBtn.addEventListener("click", () => {
     }
 
     showImage();
+});
+
+window.addEventListener("scroll", function(){
+
+    const header = document.querySelector("header");
+
+    header.classList.toggle(
+        "scrolled",
+        window.scrollY > 50
+    );
+
 });
 
 </script>
