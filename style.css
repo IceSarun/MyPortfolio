@@ -334,17 +334,22 @@ section h2::before{
 .skill-grid{
 
     display:grid;
-    margin-top:-120px;
+
     position:relative;
+
     z-index:5;
+
+    margin:
+    -120px auto 0;
+
     grid-template-columns:
     repeat(3, 1fr);
 
     gap:30px;
-    align-items:stretch;
-    max-width:1400px;
 
-    margin:auto;
+    align-items:stretch;
+
+    max-width:1400px;
 }
 
 .card{
@@ -884,6 +889,14 @@ footer{
 
         line-height:1.6;
     }
+
+    .skill-grid{
+
+        grid-template-columns:
+        1fr;
+
+        margin-top:-80px;
+    }
 }
 
 @media(max-width:600px){
@@ -918,6 +931,143 @@ footer{
 
     .project-overlay h3{
         line-height:1.05;
+    }
+}
+
+/* ========================================
+   MOBILE HEADER
+======================================== */
+
+@media(max-width:768px){
+
+    header{
+
+        padding:
+        14px
+        4%;
+
+        gap:16px;
+
+        flex-wrap:wrap;
+    }
+
+    .header-left{
+
+        gap:12px;
+    }
+
+    header h1{
+
+        font-size:20px;
+
+        line-height:1;
+    }
+
+    nav{
+
+        width:100%;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:14px;
+    }
+
+    nav a{
+
+        font-size:11px;
+
+        letter-spacing:1px;
+    }
+}
+
+
+/* ========================================
+   MOBILE HERO
+======================================== */
+
+@media(max-width:768px){
+
+    .hero{
+
+        padding:
+        120px
+        6%
+        70px;
+    }
+
+    .hero-content{
+
+        transform:
+        translateY(-10px);
+    }
+
+    .hero-content h2{
+
+        font-size:52px;
+
+        line-height:0.92;
+
+        letter-spacing:-2px;
+
+        margin-bottom:18px;
+    }
+
+    .hero-content h2 span{
+
+        margin-top:-2px;
+    }
+
+    .hero-content p{
+
+        font-size:15px;
+
+        line-height:1.7;
+
+        max-width:100%;
+    }
+
+    .hero-skills{
+
+        gap:10px;
+
+        margin-top:18px;
+    }
+
+    .hero-skills span{
+
+        font-size:11px;
+
+        letter-spacing:1px;
+    }
+}
+
+
+/* ========================================
+   EXTRA SMALL PHONE
+======================================== */
+
+@media(max-width:480px){
+
+    .hero-content h2{
+
+        font-size:42px;
+    }
+
+    .hero-content p{
+
+        font-size:14px;
+    }
+
+    nav{
+
+        gap:10px;
+    }
+
+    nav a{
+
+        font-size:10px;
     }
 }
 
