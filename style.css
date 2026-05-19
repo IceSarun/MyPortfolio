@@ -5,6 +5,12 @@
     box-sizing:border-box;
 }
 
+html,
+body{
+    overflow-x:hidden;
+    width:100%;
+}
+
 html{
     scroll-behavior:smooth;
     scroll-padding-top:100px;
@@ -1005,13 +1011,11 @@ footer{
 
     .hero-content h2{
 
-        font-size:52px;
+        font-size:64px !important;
 
         line-height:0.92;
 
         letter-spacing:-2px;
-
-        margin-bottom:18px;
     }
 
     .hero-content h2 span{
@@ -1083,7 +1087,7 @@ footer{
 
     .hero-content h2{
 
-        font-size:42px;
+        font-size:48px !important;
     }
 
     .hero-content p{
@@ -1171,4 +1175,12 @@ footer{
 
     --accentStrong:
     rgba(255,202,79,0.50);
+}
+
+
+section,
+.hero,
+header{
+
+    overflow:hidden;
 }

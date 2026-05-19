@@ -4,6 +4,16 @@
     box-sizing:border-box;
 }
 
+/* ========================================
+   FIX MOBILE HORIZONTAL SCROLL
+======================================== */
+
+html,
+body{
+    overflow-x:hidden;
+}
+
+
 body{
 
     font-family: "Inter", sans-serif !important;
@@ -447,7 +457,9 @@ nav a:hover::after{
 
     transform:translate(-50%,-50%);
 
-    width:900px;
+    width:min(900px, 90vw);
+
+    max-width:90vw;
     height:320px;
 
     background:
@@ -510,8 +522,8 @@ section h2::before{
     transform:
     translate(-50%,-50%);
 
-    width:420px;
-    height:180px;
+    width:min(420px, 90vw);
+    height:min(180px, 40vw);
 
     background:
     radial-gradient(
@@ -951,9 +963,18 @@ section h2{
         translateY(-10px);
     }
 
+    .hero-content h1::before{
+
+        width:85vw;
+
+        height:220px;
+
+        filter:blur(45px);
+    }
+
     .hero-content h1{
 
-        font-size:52px;
+        font-size:56px;
 
         line-height:0.92;
 
@@ -988,6 +1009,23 @@ section h2{
         font-size:11px;
 
         letter-spacing:1px;
+    }
+
+        .close-btn{
+
+        right:18px;
+
+        top:18px;
+
+        font-size:42px;
+    }
+
+    .nav-btn{
+
+        width:58px;
+        height:58px;
+
+        font-size:32px;
     }
 }
 
@@ -1092,13 +1130,13 @@ section h2{
 
 .image-viewer img{
 
-    width:1150px;
+    width:auto;
 
     height:650px;
 
-    max-width:90%;
+    max-width:88vw;
 
-    max-height:85vh;
+    max-height:80vh;
 
     object-fit:contain;
 
@@ -1197,10 +1235,10 @@ section h2{
 
 .prev-btn{
 
-    left:60px;
+    left:12px;
 }
 
 .next-btn{
 
-    right:60px;
+    right:12px;
 }
