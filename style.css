@@ -14,7 +14,7 @@ body{
 
     font-family: "Inter", sans-serif !important;
     color:white;
-    padding-top:78px;
+    padding-top:120px;
     background:#000;
     overflow-x:hidden;
 }
@@ -281,7 +281,7 @@ section h2{
     position:relative;
 
     font-size:clamp(34px, 4vw, 58px);
-    margin-bottom:50px;
+    margin-bottom:80px;
 
     text-transform:uppercase;
     letter-spacing:8px;
@@ -340,7 +340,7 @@ section h2::before{
     z-index:5;
 
     margin:
-    -120px auto 0;
+    40px auto 0;
 
     grid-template-columns:
     repeat(3, 1fr);
@@ -895,7 +895,7 @@ footer{
         grid-template-columns:
         1fr;
 
-        margin-top:-80px;
+        margin-top:-20px;
     }
 }
 
@@ -1043,6 +1043,37 @@ footer{
     }
 }
 
+/* ========================================
+   MOBILE BODY
+======================================== */
+
+@media(max-width:768px){
+
+    body{
+        padding-top:140px;
+    }
+}
+
+@media(max-width:768px){
+
+    nav{
+
+        width:100%;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:10px;
+    }
+
+    nav a{
+
+        font-size:10px;
+
+        letter-spacing:0.5px;
+    }
+}
 
 /* ========================================
    EXTRA SMALL PHONE
