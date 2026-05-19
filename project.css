@@ -1117,7 +1117,7 @@ section h2{
 
     transition:0.35s;
 
-    z-index:9999;
+    z-index:100000;
 
     backdrop-filter:blur(10px);
 }
@@ -1167,6 +1167,8 @@ section h2{
     color:white;
 
     cursor:pointer;
+
+    z-index:100001;
 
     transition:0.3s;
 }

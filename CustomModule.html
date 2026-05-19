@@ -242,6 +242,8 @@ images.forEach((img,index) => {
         showImage();
 
         viewer.classList.add("active");
+
+        document.body.style.overflow = "hidden";
     });
 });
 
@@ -259,6 +261,7 @@ function showImage(){
 closeViewer.addEventListener("click", () => {
 
     viewer.classList.remove("active");
+    document.body.style.overflow = "auto";
 });
 
 
@@ -269,6 +272,7 @@ viewer.addEventListener("click", (e) => {
     if(e.target === viewer){
 
         viewer.classList.remove("active");
+        document.body.style.overflow = "auto";
     }
 });
 
