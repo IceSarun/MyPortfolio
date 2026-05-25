@@ -1480,3 +1480,22 @@ header{
 
     backdrop-filter:blur(8px);
 }
+
+@media(max-width:768px){
+
+    .limited-card .project-info{
+
+        padding:24px;
+    }
+
+    .limited-card .project-info h3{
+
+        font-size:38px;
+
+        line-height:0.95;
+
+        max-width:85%;
+
+        word-break:break-word;
+    }
+}
