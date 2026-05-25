@@ -1483,34 +1483,30 @@ header{
 
 @media(max-width:768px){
 
+    .popup-card{
+
+        width:calc(100% - 32px);
+
+        max-width:760px;
+
+        margin:16px;
+    }
+
     .popup-content{
 
-        padding:28px 22px;
+        width:100%;
+
+        overflow:hidden;
     }
 
     .popup-content h2{
 
-        font-size:48px !important;
+        font-size:42px;
 
-        line-height:0.9 !important;
-
-        text-align:center !important;
-
-        width:100% !important;
-
-        max-width:100% !important;
-
-        overflow-wrap:break-word !important;
-
-        word-break:break-word !important;
-    }
-
-    .popup-content p{
-
-        font-size:15px;
-
-        line-height:1.8;
+        line-height:0.9;
 
         text-align:center;
+
+        word-break:break-word;
     }
 }
