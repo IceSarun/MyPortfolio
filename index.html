@@ -188,9 +188,74 @@
             </div>
         </div>
 
+        
+        <div class="project-card limited-card" id="limited-project">
+
+            <div class="project-image">
+
+                <img src="images/limited-project.png" alt="">
+
+            </div>
+
+            <div class="project-info limited-info">
+
+            <span class="limited-tag">
+                LIMITED PROJECT • 48 HOURS
+            </span>
+
+            <h3>
+                [ SECRET ]
+                RECIPE FOR VICTORY
+            </h3>
+
+            <p>
+                ฝากข้อความถึงพี่เจา ที่กำลังจะไปแข่งวันที่ 26 กับ 29 นี้
+            </p>
+
+            <button class="open-popup-btn" id="openPopup">
+                View Card
+            </button>
+
+            </div>
+
+        </div>
+
     </div>
 </section>
 
+<div class="message-popup" id="messagePopup">
+
+    <div class="popup-card">
+
+        <button class="close-popup" id="closePopup">
+            ✕
+        </button>
+
+        <img src="images/secret-message.png">
+
+        <div class="popup-content">
+
+            <h2>
+                FOR YOUR COMPETITION
+            </h2>
+
+            <p>
+                
+                สู้ๆ ครับพี่เจา ก่อนไปแข่งก็พักผ่อนเยอะๆ นะ เอารางวัลกลับมาอวดผมด้วยเด้อ ❤️
+
+
+                <br>
+                คำคมกระตุกจิตกระชากใจ "ผู้ชนะ ไม่ใช่คนที่ไม่เคยแพ้ แต่เป็นคนที่ไม่เคยล้มเลิก ในสิ่งที่ทำ"
+                <br>
+                
+                ปล. ผมยืมมาจากในเน็ต555
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 
 <script>
 window.addEventListener("scroll", function(){
@@ -203,6 +268,57 @@ window.addEventListener("scroll", function(){
     );
 
 });
+</script>
+
+<script>
+const project = document.getElementById("limited-project");
+
+const startDate = new Date("2026-05-25T00:00:00");
+const endDate = new Date("2026-05-27T00:00:00");
+
+const now = new Date();
+
+if(now < startDate || now > endDate){
+
+    project.style.display = "none";
+}
+</script>
+
+<script>
+
+const popup = document.getElementById("messagePopup");
+
+const openBtn = document.getElementById("openPopup");
+
+const closeBtn = document.getElementById("closePopup");
+
+
+// OPEN
+
+openBtn.addEventListener("click", () => {
+
+    popup.classList.add("active");
+});
+
+
+// CLOSE
+
+closeBtn.addEventListener("click", () => {
+
+    popup.classList.remove("active");
+});
+
+
+// CLICK OUTSIDE
+
+popup.addEventListener("click", (e) => {
+
+    if(e.target === popup){
+
+        popup.classList.remove("active");
+    }
+});
+
 </script>
 
 </body>

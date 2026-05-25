@@ -724,6 +724,47 @@ section h2::before{
         0 0 25px rgba(0,0,0,0.55);
 }
 
+.project-btn{
+
+    width:100%;
+
+    height:58px;
+
+    border-radius:16px;
+
+    border:1px solid #ff4fa3;
+
+    background:
+    rgba(0,0,0,0.75);
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:0.35s ease;
+
+    box-shadow:
+    0 0 20px rgba(255,0,120,0.18);
+}
+
+.project-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:
+    rgba(255,0,120,0.08);
+
+    box-shadow:
+    0 0 35px rgba(255,0,120,0.32);
+}
 
 /* ===== HOVER ===== */
 
@@ -1183,4 +1224,259 @@ section,
 header{
 
     overflow:hidden;
+}
+
+
+/* ========================================
+   POPUP
+======================================== */
+
+.message-popup{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,0.78);
+
+    backdrop-filter:blur(12px);
+
+    z-index:999999;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:0.35s ease;
+}
+
+/* active */
+
+.message-popup.active{
+
+    opacity:1;
+    visibility:visible;
+}
+
+/* card */
+
+.popup-card{
+
+    position:relative;
+
+    width:min(760px, 90%);
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        145deg,
+        #020403 0%,
+        #071a12 28%,
+        #0d3322 58%,
+        #19c37d 100%
+    );
+
+    border:
+    1px solid rgba(80,255,180,0.22);
+
+    box-shadow:
+    0 0 70px rgba(25,195,125,0.22),
+    0 0 120px rgba(25,195,125,0.10);
+
+    transform:
+    perspective(1200px)
+    rotateX(-90deg)
+    scale(0.8);
+
+    transform-origin:top center;
+
+    transition:0.65s cubic-bezier(.2,.8,.2,1);
+}
+
+/* animation */
+
+.message-popup.active .popup-card{
+
+    transform:
+    perspective(1200px)
+    rotateX(0deg)
+    scale(1);
+}
+
+/* image */
+
+.popup-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:contain;
+
+    object-position:center;
+
+    display:block;
+}
+
+/* content */
+
+.popup-content{
+
+    padding:42px;
+}
+
+.popup-content h2{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+    color:#1de2cbdf;
+
+    text-shadow:
+    0 0 20px rgba(120,255,190,0.28);
+}
+
+.popup-content p{
+
+    line-height:1.9;
+
+    color:#d8fff0;
+    text-align:center;
+    text-shadow:
+    0 0 10px rgba(255,255,255,0.05);
+
+    font-size:17px;
+}
+
+/* close */
+
+.close-popup{
+
+    position:absolute;
+
+    top:20px;
+    right:20px;
+
+    width:44px;
+    height:44px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,0.5);
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    z-index:5;
+}
+
+.limited-card{
+
+    --accent:#ff3f9c;
+
+    --accentGlow:
+    rgba(255,0,140,0.22);
+
+    --accentStrong:
+    rgba(255,0,140,0.5);
+}
+
+.limited-card .project-image img{
+
+    opacity:0.72;
+}
+
+/* BUTTON */
+
+.open-popup-btn{
+
+    width:100%;
+
+    height:58px;
+
+    border-radius:18px;
+
+    border:1px solid #ff3f9c;
+
+    background:
+    rgba(0,0,0,0.72);
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:800;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:0.35s ease;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 0 20px rgba(255,0,140,0.18);
+}
+
+.open-popup-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:
+    rgba(255,0,140,0.12);
+
+    box-shadow:
+    0 0 35px rgba(255,0,140,0.3);
+}
+
+.limited-tag{
+
+    display:inline-flex !important;
+
+    align-items:center;
+
+    padding:8px 16px !important;
+
+    margin-bottom:14px !important;
+
+    border-radius:999px;
+
+    background:
+    rgba(255,0,140,0.18) !important;
+
+    border:
+    1px solid rgba(255,0,140,0.45) !important;
+
+    color:#ff7dc0 !important;
+
+    font-size:11px !important;
+
+    font-weight:800 !important;
+
+    letter-spacing:3px !important;
+
+    text-transform:uppercase;
+
+    box-shadow:
+    0 0 20px rgba(255,0,140,0.25);
+
+    backdrop-filter:blur(8px);
 }
