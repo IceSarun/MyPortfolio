@@ -1483,24 +1483,28 @@ header{
 
 @media(max-width:768px){
 
-    .limited-card .project-info{
-        
-        left: 24px;
-        right: 24px;
-        bottom: 24px;
-        width: auto;
+    .popup-content{
+
+        padding:28px 22px;
     }
 
-    .limited-card .project-info h3{
+    .popup-content h2{
 
-        font-size:34px;
+        font-size:clamp(42px, 10vw, 72px);
 
-        line-height:0.92;
+        line-height:0.9;
 
-        max-width:100%;
-
-        letter-spacing: -1px;
+        text-align:center;
 
         word-break:break-word;
+    }
+
+    .popup-content p{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+        text-align:center;
     }
 }
