@@ -1245,4 +1245,33 @@ section h2{
     right:12px;
 }
 
+/* ========================================
+   MOBILE TEXT OVERFLOW FIX
+======================================== */
 
+@media(max-width:768px){
+
+    section h2,
+    .hero-content h1,
+    .feature-card h3,
+    .tech-card h3{
+
+        word-break:break-word;
+        overflow-wrap:break-word;
+
+        line-height:1.05;
+
+        max-width:100%;
+    }
+
+    .gallery h2{
+
+        font-size:42px;
+        letter-spacing:4px;
+    }
+
+    section{
+
+        overflow:hidden;
+    }
+}
