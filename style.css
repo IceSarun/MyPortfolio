@@ -1490,13 +1490,19 @@ header{
 
     .popup-content h2{
 
-        font-size:clamp(42px, 10vw, 72px);
+        font-size:48px !important;
 
-        line-height:0.9;
+        line-height:0.9 !important;
 
-        text-align:center;
+        text-align:center !important;
 
-        word-break:break-word;
+        width:100% !important;
+
+        max-width:100% !important;
+
+        overflow-wrap:break-word !important;
+
+        word-break:break-word !important;
     }
 
     .popup-content p{
