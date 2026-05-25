@@ -943,7 +943,19 @@ section h2{
 
     section h2{
 
-        font-size:46px;
+        font-size:clamp(28px, 8vw, 46px);
+
+    letter-spacing:2px;
+
+    line-height:1.1;
+
+    word-break:break-word;
+
+    overflow-wrap:break-word;
+
+    max-width:100%;
+
+    padding:0 10px;
     }
 }
 
@@ -1264,10 +1276,13 @@ section h2{
         max-width:100%;
     }
 
-    .gallery h2{
+    section h2{
 
-        font-size:42px;
-        letter-spacing:4px;
+        font-size:clamp(28px, 8vw, 46px);
+
+        letter-spacing:2px;
+
+        padding:0 10px;
     }
 
     section{
