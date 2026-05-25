@@ -1484,17 +1484,22 @@ header{
 @media(max-width:768px){
 
     .limited-card .project-info{
-
-        padding:24px;
+        
+        left: 24px;
+        right: 24px;
+        bottom: 24px;
+        width: auto;
     }
 
     .limited-card .project-info h3{
 
-        font-size:38px;
+        font-size:34px;
 
-        line-height:0.95;
+        line-height:0.92;
 
-        max-width:75%;
+        max-width:100%;
+
+        letter-spacing: -1px;
 
         word-break:break-word;
     }
